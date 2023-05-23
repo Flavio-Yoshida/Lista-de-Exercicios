@@ -1,4 +1,4 @@
-//Exercício 6
+//Exercício 6.
 import java.util.Scanner;
 
 public class AntecessorSucessor {
