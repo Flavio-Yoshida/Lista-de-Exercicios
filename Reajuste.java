@@ -1,15 +1,26 @@
 //Exercício 3
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Reajuste {
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o valor: ");
-        double valor = ler.nextDouble();
-
-        double reajuste = valor * 0.01;
-        double valorReajustado = valor + reajuste;
+        int valor;
+        do {
+            System.out.println("Digite o valor:");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Entrada inválida. Digite apenas números positivos:");
+                scanner.next(); // Descarta a entrada inválida
+            }
+            valor = scanner.nextInt();
+            if (valor <= 0) {
+                System.out.println("Entrada inválida. Digite apenas números positivos:");
+            }
+        } while (valor <= 0);
+        double reajuste = valor * 0.01; // Calcula o valor do reajuste (1% do valor)
+        double valorReajustado = valor + reajuste; // Calcula o valor com o reajuste
 
         System.out.println("Valor com reajuste: " + valorReajustado);
     }
