@@ -1,3 +1,4 @@
+//Exercício 2
 public class MediaAritmetica {
     public static void main(String[] args) {
         int[] numeros1 = {8, 9, 7};
