@@ -8,7 +8,7 @@ public class Reajuste {
         int valor;
         do {
             System.out.println("Digite o valor:");
-            while (!scanner.hasNextInt()) {
+            while (!scanner.hasNextInt()) {//Enquanto
                 System.out.println("Entrada inválida. Digite apenas números positivos:");
                 scanner.next(); // Descarta a entrada inválida
             }
